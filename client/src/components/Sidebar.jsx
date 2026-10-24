@@ -2,13 +2,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 
-function Sidebar() {
+function Sidebar({ isMobileNavOpen, closeMobileNav }) {
   const { logout, user } = useAuth();
   const navigate = useNavigate();
 
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const handleLogout = () => {
+    if (closeMobileNav) closeMobileNav();
     logout();
     navigate("/login");
   };
@@ -17,25 +18,52 @@ function Sidebar() {
     setIsCollapsed((prev) => !prev);
   };
 
+  const handleNavLinkClick = () => {
+    // Automatically close the menu on mobile after clicking a link
+    if (closeMobileNav) {
+      closeMobileNav();
+    }
+  };
+
   const isAdmin = user?.role === "admin";
 
   return (
     <aside
       className={`dashboard-sidebar ${
         isCollapsed ? "sidebar-closed" : ""
-      }`}
+      } ${isMobileNavOpen ? "mobile-open" : "mobile-closed"}`}
     >
-      <button
-        type="button"
-        className="dashboard-sidebar-logo"
-        onClick={toggleSidebar}
-        aria-label={
-          isCollapsed ? "Expand sidebar" : "Collapse sidebar"
-        }
-      >
-        <span className="dashboard-logo-mark">F</span>
-        <span className="dashboard-logo-name">FinHabit</span>
-      </button>
+      <div className="sidebar-header-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+        <button
+          type="button"
+          className="dashboard-sidebar-logo"
+          onClick={toggleSidebar}
+          aria-label={
+            isCollapsed ? "Expand sidebar" : "Collapse sidebar"
+          }
+        >
+          <span className="dashboard-logo-mark">F</span>
+          <span className="dashboard-logo-name">FinHabit</span>
+        </button>
+
+        {/* Mobile close button */}
+        <button
+          type="button"
+          className="mobile-sidebar-close-btn"
+          onClick={closeMobileNav}
+          aria-label="Close menu"
+          style={{
+            background: "transparent",
+            border: "none",
+            fontSize: "1.25rem",
+            cursor: "pointer",
+            padding: "8px",
+            color: "inherit"
+          }}
+        >
+          ✕
+        </button>
+      </div>
 
       <nav className="dashboard-navigation">
         {isAdmin ? (
@@ -43,6 +71,7 @@ function Sidebar() {
             <NavLink
               to="/admin"
               end
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -53,6 +82,7 @@ function Sidebar() {
 
             <NavLink
               to="/admin/users"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -63,6 +93,7 @@ function Sidebar() {
 
             <NavLink
               to="/admin/activity"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -75,6 +106,7 @@ function Sidebar() {
           <>
             <NavLink
               to="/dashboard"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -85,6 +117,7 @@ function Sidebar() {
 
             <NavLink
               to="/income"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -95,6 +128,7 @@ function Sidebar() {
 
             <NavLink
               to="/expenses"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -105,6 +139,7 @@ function Sidebar() {
 
             <NavLink
               to="/budgets"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -115,6 +150,7 @@ function Sidebar() {
 
             <NavLink
               to="/cash-flow"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -125,6 +161,7 @@ function Sidebar() {
 
             <NavLink
               to="/habits"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -135,6 +172,7 @@ function Sidebar() {
 
             <NavLink
               to="/goals"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -145,6 +183,7 @@ function Sidebar() {
 
             <NavLink
               to="/wealth"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -155,6 +194,7 @@ function Sidebar() {
 
             <NavLink
               to="/profile"
+              onClick={handleNavLinkClick}
               className={({ isActive }) =>
                 `dashboard-nav-link ${isActive ? "active" : ""}`
               }
@@ -172,7 +212,7 @@ function Sidebar() {
           className="sidebar-logout"
           onClick={handleLogout}
         >
-          <span className="nav-icon">↪</span>
+          <span className="nav-icon">L</span>
           <span className="nav-label">Logout</span>
         </button>
       </div>
