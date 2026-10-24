@@ -15,3 +15,64 @@
 @import "./styles/modal.css";
 @import "./styles/wealth.css";
 @import "./styles/profile.css";
+
+/* Mobile Responsive Sidebar Rules */
+@media (max-width: 768px) {
+  /* Topbar adjusts to show hamburger menu */
+  .dashboard-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: block !important;
+  }
+
+  .mobile-sidebar-close-btn {
+    display: block !important;
+  }
+
+  /* Sidebar acts as an off-canvas drawer on mobile */
+  .dashboard-sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* When closed on mobile, slide completely off-screen */
+  .dashboard-sidebar.mobile-closed {
+    transform: translateX(-100%);
+  }
+
+  /* When opened on mobile, slide into view */
+  .dashboard-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  /* Allow main content to take full screen width */
+  .dashboard-main {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Desktop screen defaults */
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .mobile-sidebar-close-btn {
+    display: none !important;
+  }
+
+  .dashboard-sidebar.mobile-closed {
+    transform: none !important;
+  }
+}
