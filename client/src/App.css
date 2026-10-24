@@ -1,0 +1,17 @@
+@import "./styles/global.css";
+@import "./styles/navbar.css";
+@import "./styles/hero.css";
+@import "./styles/features.css";
+@import "./styles/how-it-works.css";
+@import "./styles/benefits.css";
+@import "./styles/cta.css";
+@import "./styles/footer.css";
+@import "./styles/animations.css";
+@import "./styles/responsive.css";
+@import "./styles/auth.css";
+@import "./styles/dashboard.css";
+@import "./styles/habits.css";
+@import "./styles/savings-goals.css";
+@import "./styles/modal.css";
+@import "./styles/wealth.css";
+@import "./styles/profile.css";

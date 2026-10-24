@@ -1,0 +1,163 @@
+/* ========================================
+   FEATURES SECTION
+======================================== */
+
+.features-section {
+  padding: 120px 6%;
+
+  background: #ffffff;
+}
+
+
+/* ========================================
+   FEATURES GRID
+======================================== */
+
+.features-grid {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   FEATURE CARD
+======================================== */
+
+.feature-card {
+  position: relative;
+
+  padding: 28px 24px 25px;
+
+  min-height: 300px;
+
+  border: 1px solid #e8edf3;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.035);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #dbeafe;
+
+  box-shadow:
+    0 22px 40px rgba(15, 23, 42, 0.09);
+}
+
+
+
+
+/* ========================================
+   FEATURE ICON
+======================================== */
+
+.feature-icon-box {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 13px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-box {
+  transform: scale(1.08) rotate(-3deg);
+
+  background: #dbeafe;
+}
+
+
+/* ========================================
+   FEATURE CONTENT
+======================================== */
+
+.feature-card h3 {
+  color: #172033;
+
+  font-size: 1.12rem;
+
+  letter-spacing: -0.02em;
+}
+
+.feature-card p {
+  margin-top: 11px;
+
+  color: #64748b;
+
+  font-size: 0.87rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   FEATURE LINK
+======================================== */
+
+.feature-link {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+
+  color: #2563eb;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.feature-card:hover .feature-link {
+  transform: translateX(4px);
+  color: #1d4ed8;
+}
+
+
+/* ========================================
+   FEATURED CARD
+======================================== */
+
+.featured-card {
+  background:
+    linear-gradient(
+      145deg,
+      #f8fbff,
+      #ffffff
+    );
+
+  border-color: #dbeafe;
+}
+

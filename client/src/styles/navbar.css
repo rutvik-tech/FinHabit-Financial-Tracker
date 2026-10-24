@@ -1,0 +1,179 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo-link:hover .logo-mark {
+  transform: translateY(-2px) rotate(-3deg);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+.logo-name {
+  color: #111827;
+
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links > a {
+  position: relative;
+
+  color: #475569;
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-links > a:hover {
+  color: #2563eb;
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   LOGIN
+======================================== */
+
+.nav-login {
+  padding: 9px 4px;
+}
+
+
+/* ========================================
+   NAV BUTTON
+======================================== */
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 19px;
+
+  border-radius: 10px;
+
+  background: #111827;
+  color: white !important;
+
+  box-shadow:
+    0 7px 18px rgba(15, 23, 42, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.nav-button:hover {
+  background: #1e3a8a;
+
+  color: white !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.18);
+}
+
+.nav-button span {
+  font-size: 1rem;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-button:hover span {
+  transform: translateX(3px);
+}

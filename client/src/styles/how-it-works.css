@@ -1,0 +1,133 @@
+/* ========================================
+   HOW IT WORKS
+======================================== */
+
+.how-section {
+  position: relative;
+
+  padding: 120px 6%;
+
+  background: #f8fafc;
+}
+
+
+/* ========================================
+   STEPS CONTAINER
+======================================== */
+
+.steps-container {
+  position: relative;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* ========================================
+   STEP LINE
+======================================== */
+
+.step-line {
+  position: absolute;
+
+  top: 39px;
+  left: 12%;
+
+  width: 76%;
+
+  border-top: 1px dashed #bfdbfe;
+
+  z-index: 0;
+}
+
+
+/* ========================================
+   STEP CARD
+======================================== */
+
+.step-card {
+  position: relative;
+  z-index: 1;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   STEP NUMBER
+======================================== */
+
+.step-number {
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 25px;
+
+  border: 8px solid #f8fafc;
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step-card:hover .step-number {
+  transform: translateY(-5px) scale(1.05);
+
+  box-shadow:
+    0 16px 30px rgba(37, 99, 235, 0.25);
+}
+
+
+/* ========================================
+   STEP CONTENT
+======================================== */
+
+.step-content span {
+  color: #2563eb;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.step-content h3 {
+  margin-top: 7px;
+
+  color: #172033;
+
+  font-size: 1.3rem;
+}
+
+.step-content p {
+  margin-top: 9px;
+
+  color: #64748b;
+
+  font-size: 0.85rem;
+
+  line-height: 1.7;
+}

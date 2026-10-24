@@ -1,0 +1,272 @@
+/* ========================================
+   CTA SECTION
+======================================== */
+
+.cta-section {
+  position: relative;
+
+  margin:auto;
+
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 40px;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(96, 165, 250, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(129, 140, 248, 0.16),
+      transparent 32%
+    ),
+    #0f172a;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CTA INNER BORDER
+======================================== */
+
+.cta-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 1px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 27px;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CTA GLOW
+======================================== */
+
+.cta-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(59, 130, 246, 0.14),
+      transparent 68%
+    );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CTA DECORATIVE CIRCLES
+======================================== */
+
+.cta-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.035);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 80px rgba(255, 255, 255, 0.012),
+    0 0 0 160px rgba(255, 255, 255, 0.008);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CTA CONTENT
+======================================== */
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   CTA SMALL TEXT
+======================================== */
+
+.cta-small-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #93c5fd;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  line-height: 1.4;
+}
+
+
+/* ========================================
+   CTA HEADING
+======================================== */
+
+.cta-content h2 {
+  width: 100%;
+
+  margin-top: 18px;
+
+  color: white;
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* ========================================
+   CTA DESCRIPTION
+======================================== */
+
+.cta-content p {
+  width: 100%;
+  max-width: 610px;
+
+  margin: 22px auto 0;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  margin-top: 32px;
+
+  padding: 14px 23px;
+
+  border-radius: 11px;
+
+  background: white;
+
+  color: #0f172a;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.cta-button:hover {
+  background: #eff6ff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.27);
+}
+
+.cta-button span {
+  transition: transform 0.25s ease;
+}
+
+.cta-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   CTA RESPONSIVE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .cta-section {
+    width: calc(100% - 8%);
+
+    min-height: 390px;
+
+    padding: 65px 20px;
+
+    border-radius: 21px;
+  }
+
+  .cta-section::before {
+    border-radius: 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 2.3rem;
+  }
+
+  .cta-content p {
+    max-width: 500px;
+
+    font-size: 0.85rem;
+  }
+
+}

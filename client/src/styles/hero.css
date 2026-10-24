@@ -1,0 +1,712 @@
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 78px);
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 60px;
+  margin-top: 70px;
+  padding: 90px 6% 100px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(219, 234, 254, 0.7),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(224, 231, 255, 0.65),
+      transparent 30%
+    ),
+    #f8fafc;
+}
+
+
+/* ========================================
+   HERO GLOW
+======================================== */
+
+.hero-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.hero-glow-one {
+  top: 5%;
+  left: -120px;
+  background: #bfdbfe;
+}
+
+.hero-glow-two {
+  right: -130px;
+  bottom: 0;
+  background: #c7d2fe;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  background: rgba(239, 246, 255, 0.85);
+  color: #2563eb;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563eb;
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+
+/* ========================================
+   HERO HEADING
+======================================== */
+
+.hero-content h1 {
+  margin-top: 24px;
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: #0f172a;
+}
+
+.hero-content h1 span {
+  color: #2563eb;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.hero-description {
+  max-width: 610px;
+  margin-top: 28px;
+  color: #64748b;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 11px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.2);
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow:
+    0 17px 32px rgba(37, 99, 235, 0.28);
+}
+
+.button-arrow {
+  font-size: 1.05rem;
+  transition: transform 0.25s ease;
+}
+
+.primary-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+.secondary-button {
+  border: 1px solid #dbe2ea;
+  background: white;
+  color: #334155;
+  box-shadow:
+    0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.secondary-button:hover {
+  border-color: #bfdbfe;
+  background: #f8fbff;
+  color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ========================================
+  HERO TRUST
+======================================== */
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 28px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.trust-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+  HERO DASHBOARD
+======================================== */
+
+.hero-dashboard {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-glow {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.16);
+  filter: blur(70px);
+}
+
+
+/* ========================================
+  DASHBOARD PREVIEW
+======================================== */
+
+.dashboard-preview {
+  position: relative;
+  width: min(100%, 620px);
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 35px 80px rgba(15, 23, 42, 0.14),
+    0 8px 30px rgba(37, 99, 235, 0.08);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+
+/* ========================================
+  PREVIEW TOPBAR
+======================================== */
+
+.preview-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3px 4px 17px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+.preview-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.preview-dots span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #cbd5e1;
+}
+
+.preview-title {
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.preview-menu {
+  color: #94a3b8;
+
+  font-size: 0.9rem;
+}
+
+
+/* ========================================
+   DASHBOARD HEADER
+======================================== */
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 23px 10px 20px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.dashboard-header h2 {
+  margin-top: 4px;
+
+  color: #0f172a;
+
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.net-worth-growth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 3px;
+
+  color: #16a34a;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.growth-badge {
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #ecfdf5;
+  color: #059669;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   DASHBOARD STATS
+======================================== */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+.preview-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px;
+
+  border: 1px solid #edf1f5;
+  border-radius: 12px;
+
+  background: #fafbfc;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.preview-stat:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.preview-stat p {
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.preview-stat strong {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #334155;
+
+  font-size: 0.85rem;
+}
+
+.stat-icon {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.income-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.expense-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.saving-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+
+/* ========================================
+   CHART
+======================================== */
+
+.chart-section {
+  margin-top: 16px;
+
+  padding: 17px;
+
+  border: 1px solid #edf1f5;
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.chart-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart-heading p {
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.chart-heading strong {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #334155;
+
+  font-size: 0.8rem;
+}
+
+.chart-heading > span {
+  color: #16a34a;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.preview-chart {
+  position: relative;
+
+  height: 145px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  gap: 12px;
+
+  margin-top: 18px;
+
+  padding: 0 5px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chart-grid-line {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+
+  border-top: 1px dashed #e2e8f0;
+}
+
+.line-one {
+  top: 25%;
+}
+
+.line-two {
+  top: 50%;
+}
+
+.line-three {
+  top: 75%;
+}
+
+.chart-bar {
+  position: relative;
+  z-index: 2;
+
+  width: 28px;
+
+  border-radius: 7px 7px 0 0;
+
+  background: linear-gradient(
+    to top,
+    #2563eb,
+    #60a5fa
+  );
+
+  transform-origin: bottom;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.chart-bar:hover {
+  transform: scaleX(1.12);
+  opacity: 0.85;
+}
+
+.bar-1 {
+  height: 35%;
+}
+
+.bar-2 {
+  height: 48%;
+}
+
+.bar-3 {
+  height: 42%;
+}
+
+.bar-4 {
+  height: 64%;
+}
+
+.bar-5 {
+  height: 57%;
+}
+
+.bar-6 {
+  height: 77%;
+}
+
+.bar-7 {
+  height: 91%;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 8px;
+
+  color: #94a3b8;
+
+  font-size: 0.62rem;
+}
+
+
+/* ========================================
+   HABIT PREVIEW
+======================================== */
+
+.habit-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 12px;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff6ff,
+      #f8fafc
+    );
+}
+
+.habit-preview p {
+  color: #64748b;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.habit-preview strong {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #334155;
+
+  font-size: 0.8rem;
+}
+
+.progress-circle {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 4px solid #bfdbfe;
+
+  background: white;
+
+  color: #2563eb;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   SUBTLE GRID BACKGROUND
+======================================== */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(37, 99, 235, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 55px 55px;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+  pointer-events: none;
+}
+
+
+/* ========================================
+  LARGE BACKGROUND ORB
+======================================== */
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -190px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(96, 165, 250, 0.13);
+
+  box-shadow:
+    0 0 0 55px rgba(96, 165, 250, 0.025),
+    0 0 0 110px rgba(96, 165, 250, 0.018);
+
+  pointer-events: none;
+}

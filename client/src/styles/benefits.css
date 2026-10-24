@@ -1,0 +1,166 @@
+/* ========================================
+   BENEFITS
+======================================== */
+
+.benefits-section {
+  padding: 120px 6%;
+
+  background: #ffffff;
+}
+
+.benefits-wrapper {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+/* ========================================
+   BENEFITS CONTENT
+======================================== */
+
+.benefits-content h2 {
+  max-width: 520px;
+
+  margin-top: 20px;
+
+  color: #111827;
+
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.045em;
+}
+
+.benefits-content h2 span {
+  color: #2563eb;
+}
+
+.benefits-content > p {
+  max-width: 510px;
+
+  margin-top: 20px;
+
+  color: #64748b;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   TEXT BUTTON
+======================================== */
+
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 30px;
+
+  color: #2563eb;
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+.text-button:hover {
+  gap: 15px;
+
+  color: #1d4ed8;
+}
+
+
+/* ========================================
+   BENEFITS LIST
+======================================== */
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+
+  gap: 18px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid #e8edf3;
+
+  transition:
+    transform 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.benefit-item:first-child {
+  border-top: 1px solid #e8edf3;
+}
+
+.benefit-item:hover {
+  padding-left: 8px;
+
+  transform: translateX(3px);
+}
+
+
+/* ========================================
+   BENEFIT ICON
+======================================== */
+
+.benefit-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   BENEFIT CONTENT
+======================================== */
+
+.benefit-item h3 {
+  color: #1e293b;
+
+  font-size: 1rem;
+}
+
+.benefit-item p {
+  margin-top: 5px;
+
+  color: #64748b;
+
+  font-size: 0.82rem;
+
+  line-height: 1.65;
+}

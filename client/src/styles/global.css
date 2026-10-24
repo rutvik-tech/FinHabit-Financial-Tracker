@@ -1,0 +1,152 @@
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #f7f9fc;
+  color: #172033;
+
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #dbeafe;
+  color: #0f172a;
+}
+
+
+/* ========================================
+   COMMON CONTAINER
+======================================== */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+section {
+  width: 100%;
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-top: 18px;
+
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+
+  color: #111827;
+}
+
+.section-heading h2 span {
+  display: inline;
+  color: #2563eb;
+}
+
+.section-heading p {
+  max-width: 620px;
+  margin: 20px auto 0;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  color: #64748b;
+}
+
+
+/* ========================================
+   SECTION BADGE
+======================================== */
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 14px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

@@ -1,0 +1,567 @@
+.wealth-page {
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wealth-header {
+  margin-bottom: 32px;
+}
+
+.wealth-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.wealth-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.wealth-header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* Notification Banners */
+.wealth-alert {
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  animation: wealthAlertFade 0.25s ease;
+}
+
+.wealth-alert-error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.wealth-alert-success {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.wealth-alert-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.wealth-alert-close:hover {
+  opacity: 1;
+}
+
+/* Summary Grid */
+.wealth-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.wealth-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 100px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wealth-summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.wealth-card-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.wealth-summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.wealth-summary-card strong {
+  color: #0f172a;
+  font-size: 18px;
+}
+
+/* Main Grid: Chart and Form */
+.wealth-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.wealth-chart-card,
+.wealth-form-card,
+.wealth-history-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.wealth-chart-card,
+.wealth-form-card {
+  padding: 26px;
+}
+
+.wealth-section-header {
+  margin-bottom: 22px;
+}
+
+.wealth-section-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.wealth-section-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.wealth-chart {
+  width: 100%;
+  height: 320px;
+}
+
+.wealth-empty-chart,
+.wealth-empty-history,
+.wealth-loading {
+  display: flex;
+  min-height: 280px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+}
+
+.wealth-empty-chart h3,
+.wealth-empty-history h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.wealth-empty-chart p,
+.wealth-empty-history p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.wealth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wealth-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.wealth-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.wealth-form-group label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wealth-form-group input,
+.wealth-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wealth-form-group input {
+  height: 44px;
+  padding: 0 14px;
+}
+
+.wealth-form-group textarea {
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.wealth-form-group input:focus,
+.wealth-form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.wealth-calculation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+}
+
+.wealth-calculation div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wealth-calculation span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.wealth-calculation strong {
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.wealth-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.wealth-submit-button,
+.wealth-cancel-button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wealth-submit-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.wealth-submit-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.wealth-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.wealth-cancel-button {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.wealth-cancel-button:hover {
+  background: #e2e8f0;
+}
+
+/* History Card & Table */
+.wealth-history-card {
+  padding: 26px;
+}
+
+.wealth-table-wrapper {
+  overflow-x: auto;
+}
+
+.wealth-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wealth-table th {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.wealth-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+}
+
+.wealth-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.wealth-positive {
+  color: #16a34a !important;
+  font-weight: 700;
+}
+
+.wealth-negative {
+  color: #dc2626 !important;
+  font-weight: 700;
+}
+
+.wealth-table-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Themed Action Buttons */
+.wealth-edit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wealth-edit-btn svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+}
+
+.wealth-edit-btn:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+.wealth-delete-btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wealth-delete-btn:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* Modals (Edit & Delete) */
+.wealth-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  animation: wealthOverlayIn 0.2s ease;
+}
+
+.wealth-edit-modal {
+  width: 100%;
+  max-width: 520px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  animation: wealthModalIn 0.2s ease;
+}
+
+.wealth-modal-header {
+  margin-bottom: 20px;
+}
+
+.wealth-modal-header h2 {
+  margin: 4px 0 0;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.wealth-delete-modal {
+  width: 100%;
+  max-width: 440px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  text-align: center;
+  animation: wealthModalIn 0.2s ease;
+}
+
+.wealth-delete-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.wealth-delete-content h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.wealth-delete-content p {
+  margin: 8px 0 14px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.wealth-delete-content strong {
+  display: block;
+  color: #dc2626;
+  font-size: 18px;
+}
+
+.wealth-delete-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wealth-delete-confirm-btn {
+  padding: 10px 18px;
+  border: 1px solid #dc2626;
+  border-radius: 10px;
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wealth-delete-confirm-btn:hover {
+  background: #b91c1c;
+}
+
+@keyframes wealthOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes wealthModalIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wealthAlertFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+  .wealth-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wealth-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .wealth-page {
+    padding: 24px 16px;
+  }
+  .wealth-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wealth-form-row,
+  .wealth-calculation {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .wealth-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .wealth-chart-card,
+  .wealth-form-card,
+  .wealth-history-card {
+    padding: 20px;
+  }
+  .wealth-form-actions {
+    flex-direction: column;
+  }
+  .wealth-submit-button,
+  .wealth-cancel-button {
+    width: 100%;
+  }
+}

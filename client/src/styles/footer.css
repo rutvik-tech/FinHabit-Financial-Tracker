@@ -1,0 +1,275 @@
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  position: relative;
+
+  padding: 65px 6% 25px;
+
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(219, 234, 254, 0.5),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(224, 231, 255, 0.45),
+      transparent 28%
+    ),
+    #f8fafc;
+
+  border-top: 1px solid #e8edf3;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   FOOTER GRID BACKGROUND
+======================================== */
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(37, 99, 235, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   FOOTER DECORATIVE CIRCLE
+======================================== */
+
+.footer::after {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -170px;
+  bottom: -260px;
+
+  border: 1px solid rgba(37, 99, 235, 0.07);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 55px rgba(37, 99, 235, 0.018),
+    0 0 0 110px rgba(37, 99, 235, 0.012);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   FOOTER MAIN
+======================================== */
+
+.footer-main {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* ========================================
+   FOOTER BRAND
+======================================== */
+
+.footer-brand {
+  position: relative;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #111827;
+
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.footer-logo-mark {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-brand:hover .footer-logo-mark {
+  transform: translateY(-2px) rotate(-3deg);
+
+  box-shadow:
+    0 12px 23px rgba(37, 99, 235, 0.22);
+}
+
+.footer-brand p {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 0.78rem;
+}
+
+
+/* ========================================
+   FOOTER MESSAGE
+======================================== */
+
+.footer-message {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 12px 17px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.035);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.footer-message span {
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  transition:
+    color 0.25s ease;
+}
+
+.footer-message span:hover {
+  color: #2563eb;
+}
+
+
+/* ========================================
+   FOOTER BOTTOM
+======================================== */
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 40px auto 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #e2e8f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #94a3b8;
+
+  font-size: 0.7rem;
+}
+
+
+/* ========================================
+   FOOTER MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  .footer {
+    padding: 50px 5% 20px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+  .footer-message {
+    gap: 13px;
+
+    padding: 10px 14px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-top: 30px;
+  }
+
+}
