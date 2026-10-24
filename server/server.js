@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -30,7 +29,7 @@ app.use(
 
 app.use(express.json());
 
-// Route Mounts
+// API Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/income", require("./routes/incomeRoutes"));
 app.use("/api/expenses", require("./routes/expenseRoutes"));
@@ -41,18 +40,13 @@ app.use("/api/budgets", require("./routes/budgetRoutes"));
 app.use("/api/analytics", require("./routes/analyticsRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
 
-// Serve static frontend in production
-if (process.env.NODE_ENV === "production") {
-  const distPath = path.join(__dirname, "../client/dist");
-  app.use(express.static(distPath));
-
-  app.get("*", (req, res, next) => {
-    if (req.originalUrl.startsWith("/api")) {
-      return next();
-    }
-    res.sendFile(path.join(distPath, "index.html"));
+// Root Health Check Route
+app.get("/", (req, res) => {
+  res.json({
+    status: "success",
+    message: "FinHabit API is running smoothly."
   });
-}
+});
 
 // Global Error Handler
 app.use((err, req, res, next) => {
